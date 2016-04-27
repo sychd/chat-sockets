@@ -1,0 +1,25 @@
+<script src="/javascripts/script.js" defer></script>
+<div class="col-md-1">
+    <p>Active connections:<span class="curr-online" id="curr-online"> </span></p>
+</div>
+<div class="chat col-md-8 col-md-push-1">
+    <div class="chat-area" id='chat-area'>
+           <p>Hi, <span id="username" class="username">{{user}}</span>!</p>
+        <ul id="messages" class="messages">
+            {{#each msgs}}
+                <li><span class="username">{{username}}</span>: {{message}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <form id="msg-post-form" class='input-group ' action="">
+        <input id="m" class="form-control" autocomplete="off"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default">Send</button>
+        </span>
+    </form>
+    <div class="type-area">
+        <ul id="who-types" class="who-types"></ul>
+    </div>
+</div>
+
+
